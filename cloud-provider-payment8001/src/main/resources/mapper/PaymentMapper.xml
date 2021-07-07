@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zq.cloudproviderpayment8001.mapper.PaymentMapper">
+    <insert id="insert" parameterType="cn.zq.cloudproviderpayment8001.entity.Payment" useGeneratedKeys="true">
+        insert into payment(serial) values(#{payment.serial})
+    </insert>
+
+    <resultMap id="queryPaymentMap" type="cn.zq.cloudproviderpayment8001.entity.Payment">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="serial" property="serial" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="queryPaymentEoById" parameterType="java.lang.Long" resultMap="queryPaymentMap">
+        select * from payment where id=#{id}
+    </select>
+</mapper>
