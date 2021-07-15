@@ -5,7 +5,7 @@
     <insert id="insert" parameterType="cn.zq.cloudproviderpayment8001.entity.Payment" useGeneratedKeys="true">
         insert into payment(serial) values(#{payment.serial})
     </insert>
-
+    <cache/>
     <resultMap id="queryPaymentMap" type="cn.zq.cloudproviderpayment8001.entity.Payment">
         <id column="id" property="id" jdbcType="BIGINT"/>
         <result column="serial" property="serial" jdbcType="VARCHAR"/>
