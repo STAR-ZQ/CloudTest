@@ -1,5 +1,10 @@
 server:
   port: 8001
+  ssl:
+    key-store: classpath:server/dsstore.p12
+    key-store-password: dengshuai@123*Ds
+    keyAlias: dengshuai_ca
+    keyStoreType: PKCS12
 spring:
   application:
     name: cloud-provider-payment8001
@@ -14,6 +19,9 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# 关于如何生成、配置证书，可参考本人的这篇博客:https://blog.csdn.net/justry_deng/article/details/91569132
+http:
+  port: 12345
 
 
 
