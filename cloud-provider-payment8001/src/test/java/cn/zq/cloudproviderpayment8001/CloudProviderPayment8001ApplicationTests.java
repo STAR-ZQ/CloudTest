@@ -12,10 +12,14 @@ import org.apache.http.ParseException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.conn.ssl.NoopHostnameVerifier;
+import org.apache.http.conn.ssl.TrustStrategy;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.ssl.SSLContextBuilder;
 import org.apache.http.util.EntityUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,6 +31,11 @@ import java.io.OutputStreamWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,11 +53,20 @@ class CloudProviderPayment8001ApplicationTests {
     }
 
     @Test
-    public void doPostTestThree() {
+    public void doPostTestThree() throws KeyStoreException, NoSuchAlgorithmException, KeyManagementException {
 
         // 获得Http客户端(可以理解为:你得先有一个浏览器;注意:实际上HttpClient与浏览器是不一样的)
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
-
+        SSLContextBuilder builder = new SSLContextBuilder();
+        builder.loadTrustMaterial(null, new TrustStrategy() {
+            // 证书校验忽略
+            public boolean isTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                return true;
+            }
+        });
+        // 创建链接
+        httpClient = HttpClients.custom().setSSLContext(builder.build())
+                .setSSLHostnameVerifier(NoopHostnameVerifier.INSTANCE).build();
         // 创建Post请求
         // 参数
         URI uri = null;
@@ -57,11 +75,10 @@ class CloudProviderPayment8001ApplicationTests {
             List<org.apache.http.NameValuePair> params = new ArrayList<>();
             params.add(new BasicNameValuePair("code", "7010"));
             params.add(new BasicNameValuePair("token", "7DF72F9A741DFD817906A063EBF9548F"));
-            params.add(new BasicNameValuePair("method", "test"));
             // 设置uri信息,并将参数集合放入uri;
             // 注:这里也支持一个键值对一个键值对地往里面放setParameter(String key, String value)
-            uri = new URIBuilder().setScheme("http").setHost("localhost").setPort(12345)
-                    .setPath("/doPostControllerThree").setParameters(params).build();
+            uri = new URIBuilder().setScheme("http").setHost("localhost").setPort(18081)
+                    .setPath("/test").setParameters(params).build();
         } catch (URISyntaxException e1) {
             e1.printStackTrace();
         }
@@ -76,13 +93,13 @@ class CloudProviderPayment8001ApplicationTests {
 //		user.setAge(18);
 //		user.setGender("女");
 //		user.setMotto("姿势要优雅~");
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("test", "hah");
-        // 将user对象转换为json字符串，并放入entity中
-        StringEntity entity = new StringEntity(JSON.toJSONString(jsonObject), "UTF-8");
-
-        // post请求是将参数放在请求体里面传过去的;这里将entity放入post请求体中
-        httpPost.setEntity(entity);
+//        JSONObject jsonObject = new JSONObject();
+//        jsonObject.put("test", "hah");
+//        // 将user对象转换为json字符串，并放入entity中
+//        StringEntity entity = new StringEntity(JSON.toJSONString(jsonObject), "UTF-8");
+//
+//        // post请求是将参数放在请求体里面传过去的;这里将entity放入post请求体中
+//        httpPost.setEntity(entity);
 
         httpPost.setHeader("Content-Type", "application/json;charset=utf8");
 

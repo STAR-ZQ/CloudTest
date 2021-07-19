@@ -5,28 +5,36 @@ import cn.zq.cloudproviderpayment8001.common.RestResponse;
 import cn.zq.cloudproviderpayment8001.dao.ExportTestDto;
 import cn.zq.cloudproviderpayment8001.entity.Payment;
 import cn.zq.cloudproviderpayment8001.service.PaymentService;
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.microsoft.schemas.office.x2006.encryption.CTKeyEncryptor;
+import io.micrometer.core.instrument.util.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.params.HttpMethodParams;
-import org.apache.commons.httpclient.util.HttpURLConnection;
-import org.apache.poi.ss.formula.functions.T;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.poi.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.net.URL;
+import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,10 +58,32 @@ public class PaymentRest {
 
     @PostMapping(value = "/test", produces = "application/json")
     public String testMethod(String code, String name, String token, @RequestBody JSONObject jsonObject) {
-        System.out.println("测试:code:" + code + ",name:" + name + ",token:" + token + "\n" + jsonObject);
-        return code + "/" + jsonObject;
+        System.out.println("测试:code:" + code + ",name:" + name + ",token:" + token + "\n" + JSON.toJSONString(jsonObject));
+        return code + "/" + JSON.toJSONString(jsonObject);
     }
 
+    @PostMapping("/savePicByFormData")
+    public String savePicByFormData(@RequestParam("file") MultipartFile file) throws IOException {
+        String fileName = savePicByFormDatas(file);
+        return fileName;
+    }
+
+    public static String savePicByFormDatas(MultipartFile file) throws IOException {
+
+        // 图片存储路径
+        String path = "C:\\image\\factory";
+        // 判断是否有路径
+        if (!new File(path).exists()) {
+            new File(path).mkdirs();
+        }
+        String fileName = System.currentTimeMillis() + ".jpg";
+        File tempFile = new File(path, fileName);
+        if (!tempFile.exists()) {
+            tempFile.createNewFile();
+        }
+        file.transferTo(tempFile);
+        return fileName;
+    }
 
     @RequestMapping("export")
     public void export(HttpServletResponse response) {
@@ -72,30 +102,73 @@ public class PaymentRest {
         //导出操作
         FileUtil.exportExcel(personList, "花名册", "草帽一伙", ExportTestDto.class, "海贼王.xls", response);
     }
+//    @PostMapping("/savePicByFormData")
+//    public String savePicByFormData(@RequestParam("file") MultipartFile file) throws IOException {
+//        String fileName = savePicByFormDatas(file);
+//        return fileName;
+//    }
+//
+//    public static String savePicByFormDatas(MultipartFile file) throws IOException {
+//
+//        // 图片存储路径
+//        String path = "C:\\image\\factory";
+//        // 判断是否有路径
+//        if (!new File(path).exists()) {
+//            new File(path).mkdirs();
+//        }
+//        String fileName ="test.jpg";
+//        File tempFile = new File(path,fileName);
+//        if (!tempFile.exists()) {
+//            tempFile.createNewFile();
+//        }
+//        file.transferTo(tempFile);
+//        return fileName;
+//    }
 
-    public static void main(String[] args) throws Exception {
-        Class<?> clazz = null;
-        Field field = null;
-        Method method = null;
+    public static void upload2() throws ClientProtocolException, IOException, URISyntaxException {
+        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
+        CloseableHttpResponse httpResponse = null;
+        RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(200000).setSocketTimeout(200000000).build();
+        URI uri = new URIBuilder().setScheme("http").setHost("localhost").setPort(12345)
+                .setPath("/savePicByFormData").build();
+        HttpPost httpPost = new HttpPost(uri);
+        httpPost.setConfig(requestConfig);
+        MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();
+        //multipartEntityBuilder.setCharset(Charset.forName("UTF-8"));
 
-        clazz = Class.forName("cn.zq.cloudproviderpayment8001.entity.Payment");
-        //field = clazz.getField("num");       getField() 方法不能获取私有的属性
-        // field = clazz.getField("type");     访问私有字段时会报 NoSuchFieldException异常
-        field = clazz.getDeclaredField("type");     //获取私有type 属性
-        Field id = clazz.getField("id");
-        field.setAccessible(true);  //对私有字段的访问取消检查
-        Payment fruit = (Payment) clazz.newInstance();  //创建无参对象实例
-        field.set(fruit, "Apple");   //为无参对象实例属性赋值
-        id.set(fruit, Long.valueOf("123456"));
-        Object type = field.get(fruit); //通过fruit 对象获取属性值
-        System.out.println(type + "/" + id.get(fruit));
+        //File file = new File("F:\\Ken\\1.PNG");
+        //FileBody bin = new FileBody(file);
 
-        method = clazz.getMethod("show", null);
-        method.invoke(fruit, null);
+        File file = new File("E:\\IdeaProjects\\dahua\\Image\\2021-07-15\\Big_Time_20210715_173716_1-1-0.jpg");
 
-        method = clazz.getMethod("show", int.class);
-        method.invoke(fruit, 20);
-        //sendPost("http://localhost:8081");
+        //multipartEntityBuilder.addBinaryBody("file", file,ContentType.create("image/png"),"abc.pdf");
+        //当设置了setSocketTimeout参数后，以下代码上传PDF不能成功，将setSocketTimeout参数去掉后此可以上传成功。上传图片则没有个限制
+        //multipartEntityBuilder.addBinaryBody("file",file,ContentType.create("application/octet-stream"),"abd.pdf");
+        multipartEntityBuilder.addBinaryBody("file", file);
+        //multipartEntityBuilder.addPart("comment", new StringBody("This is comment", ContentType.TEXT_PLAIN));
+        multipartEntityBuilder.addTextBody("comment", "this is comment");
+        HttpEntity httpEntity = multipartEntityBuilder.build();
+        httpPost.setEntity(httpEntity);
+
+        httpResponse = httpClient.execute(httpPost);
+        HttpEntity responseEntity = httpResponse.getEntity();
+        int statusCode = httpResponse.getStatusLine().getStatusCode();
+        if (statusCode == 200) {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(responseEntity.getContent()));
+            StringBuffer buffer = new StringBuffer();
+            String str = "";
+            while (!StringUtils.isEmpty(str = reader.readLine())) {
+                buffer.append(str);
+            }
+
+            System.out.println(buffer.toString());
+        }
+
+        httpClient.close();
+        if (httpResponse != null) {
+            httpResponse.close();
+        }
+
     }
 
 
