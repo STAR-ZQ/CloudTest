@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="af492d0b-6d2e-4153-9b63-b855686e8670" name="Default Changelist" comment="测试mybatis缓存">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/util/HttpClientUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StreamTestDemo/Test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/schdule/TestSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/test/ProduceRealDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/test/RedisDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ZQ_SpringCloud/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/cn/zq/cloudproviderpayment8001/common/HttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/cn/zq/cloudproviderpayment8001/common/HttpClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/cn/zq/cloudproviderpayment8001/rest/PaymentRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/cn/zq/cloudproviderpayment8001/rest/PaymentRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/test/java/cn/zq/cloudproviderpayment8001/CloudProviderPayment8001ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/test/java/cn/zq/cloudproviderpayment8001/CloudProviderPayment8001ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudTestZQ.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamTestDemo/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamTestDemo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamTestDemo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/StreamApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/StreamApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/StreamApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/StreamApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +57,7 @@
         <option value="Enum" />
         <option value="package-info" />
         <option value="Kotlin Class" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -60,39 +73,34 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="userSettingsFile" value="D:\Maven\springBootMaven\conf\settings.xml" />
-        <option name="workOffline" value="true" />
+        <option name="localRepository" value="D:\apk\apache-maven-3.8.1\Respository" />
+        <option name="userSettingsFile" value="D:\apk\apache-maven-3.8.1\conf\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="createModuleGroups" value="true" />
-        <option name="downloadAnnotationsAutomatically" value="true" />
-        <option name="downloadDocsAutomatically" value="true" />
-        <option name="downloadSourcesAutomatically" value="true" />
-        <option name="importAutomatically" value="true" />
-        <option name="vmOptionsForImporter" value="-Xmx768m" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1hZoP0AerA637fw9KcmCxnb246T" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IdeaProjects/dahuaSdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -103,8 +111,8 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.zq.stream" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zq.stream.test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\CloudTestZQ\cloud-provider-payment8001\src\main\resources" />
@@ -113,13 +121,16 @@
       <recent name="C:\Users\z1501\Desktop\CloudTestZQ\StreamTestDemo\src\main\resources" />
       <recent name="C:\Users\z1501\Desktop\CloudTestZQ\cloud-provider-payment8001\src\main\resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\z1501\Desktop\CloudTestZQ\cloud-provider-payment8001\src\main\resources\mapper" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.zq.stream" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.demo.testImpl" />
       <recent name="com.zq.stream.test.testImpl" />
       <recent name="com.cloud.zq.rabbitmq.test" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\z1501\Desktop\CloudTestZQ\cloud-provider-payment8001\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -134,61 +145,67 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CloudProviderPayment8001ApplicationTests.doPostTestThree">
-    <configuration name="PaymentRest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.zq.cloudproviderpayment8001.rest.PaymentRest" />
-      <module name="cloud-provider-payment8001" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.zq.cloudproviderpayment8001.rest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CloudProviderPayment8001ApplicationTests.doPostTestThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cloud-provider-payment8001" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.zq.cloudproviderpayment8001.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.zq.cloudproviderpayment8001" />
-      <option name="MAIN_CLASS_NAME" value="cn.zq.cloudproviderpayment8001.CloudProviderPayment8001ApplicationTests" />
-      <option name="METHOD_NAME" value="doPostTestThree" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CloudProviderPayment8001ApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cloud-provider-payment8001" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.zq.cloudproviderpayment8001.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.zq.cloudproviderpayment8001" />
-      <option name="MAIN_CLASS_NAME" value="cn.zq.cloudproviderpayment8001.CloudProviderPayment8001ApplicationTests" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.StreamApplication (1)">
+    <configuration name="StreamApiTest.redisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="stream" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zq.stream.test.*" />
+          <option name="PATTERN" value="com.zq.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zq.stream.test.App" />
+      <option name="PACKAGE_NAME" value="com.zq.stream" />
+      <option name="MAIN_CLASS_NAME" value="com.zq.stream.StreamApiTest" />
+      <option name="METHOD_NAME" value="redisTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StreamApiTest.test8w" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stream" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zq.stream.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zq.stream" />
+      <option name="MAIN_CLASS_NAME" value="com.zq.stream.StreamApiTest" />
+      <option name="METHOD_NAME" value="test8w" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StreamApiTest.testTime123" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stream" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zq.stream.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zq.stream" />
+      <option name="MAIN_CLASS_NAME" value="com.zq.stream.StreamApiTest" />
+      <option name="METHOD_NAME" value="testTime123" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StreamApiTest.timeUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stream" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zq.stream.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zq.stream" />
+      <option name="MAIN_CLASS_NAME" value="com.zq.stream.StreamApiTest" />
+      <option name="METHOD_NAME" value="timeUnitTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -203,6 +220,13 @@
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitmqApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rabbitmq" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.zq.rabbitmq.RabbitmqApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -298,11 +322,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CloudProviderPayment8001ApplicationTests.doPostTestThree" />
         <item itemvalue="Spring Boot.StreamApplication (1)" />
-        <item itemvalue="Spring Boot.App" />
-        <item itemvalue="JUnit.CloudProviderPayment8001ApplicationTests.test" />
-        <item itemvalue="Application.PaymentRest" />
+        <item itemvalue="JUnit.StreamApiTest.testTime123" />
+        <item itemvalue="JUnit.StreamApiTest.test8w" />
+        <item itemvalue="JUnit.StreamApiTest.timeUnitTest" />
+        <item itemvalue="JUnit.StreamApiTest.redisTest" />
       </list>
     </recent_temporary>
   </component>
@@ -339,6 +363,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -474,6 +499,12 @@
       <workItem from="1626398610150" duration="12761000" />
       <workItem from="1626485346963" duration="8056000" />
       <workItem from="1626657820283" duration="11434000" />
+      <workItem from="1630577053487" duration="1088000" />
+      <workItem from="1631003524925" duration="4448000" />
+      <workItem from="1631067219129" duration="1383000" />
+      <workItem from="1631072121124" duration="6793000" />
+      <workItem from="1631523328754" duration="1912000" />
+      <workItem from="1632391655259" duration="2807000" />
     </task>
     <task id="LOCAL-00001" summary="测试mybatis缓存">
       <created>1626332793477</created>
@@ -486,135 +517,24 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="测试mybatis缓存" />
     <option name="LAST_COMMIT_MESSAGE" value="测试mybatis缓存" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="189" key="#Tomcat_Server" timestamp="1626428392392">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="189" key="#Tomcat_Server/0.0.1920.1040@0.0.1920.1040" timestamp="1626428392392" />
-    <state x="414" y="175" width="1092" height="712" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626428392848">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="175" width="1092" height="712" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626428392848" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1626405887137">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1626405887137" />
-    <state x="667" y="378" width="586" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626420537132">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="378" width="586" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1626420537132" />
-    <state x="505" y="113" key="CommitChangelistDialog2" timestamp="1626332956408">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="505" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1626332956408" />
-    <state width="568" height="589" key="DebuggerActiveHint" timestamp="1626340273946">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="454" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1618470532117" />
-    <state width="568" height="589" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1626340273946" />
-    <state x="686" y="211" key="FileChooserDialogImpl" timestamp="1626677287936">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="686" y="211" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1626677287936" />
-    <state width="1478" height="289" key="GridCell.Tab.0.bottom" timestamp="1626678641835">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1491" height="234" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1618563287304" />
-    <state width="1478" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626678641835" />
-    <state width="1478" height="289" key="GridCell.Tab.0.center" timestamp="1626678641835">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1491" height="234" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1618563287304" />
-    <state width="1478" height="289" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626678641835" />
-    <state width="1478" height="289" key="GridCell.Tab.0.left" timestamp="1626678641835">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1491" height="234" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1618563287303" />
-    <state width="1478" height="289" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626678641835" />
-    <state width="1478" height="289" key="GridCell.Tab.0.right" timestamp="1626678641835">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1491" height="234" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1618563287304" />
-    <state width="1478" height="289" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626678641835" />
-    <state width="1478" height="289" key="GridCell.Tab.1.bottom" timestamp="1626678641202">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1491" height="257" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1618535815748" />
-    <state width="1478" height="289" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626678641202" />
-    <state width="1478" height="289" key="GridCell.Tab.1.center" timestamp="1626678641201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1491" height="257" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1618535815747" />
-    <state width="1478" height="289" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626678641201" />
-    <state width="1478" height="289" key="GridCell.Tab.1.left" timestamp="1626678641201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1491" height="257" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1618535815747" />
-    <state width="1478" height="289" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626678641201" />
-    <state width="1478" height="289" key="GridCell.Tab.1.right" timestamp="1626678641201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1491" height="257" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1618535815747" />
-    <state width="1478" height="289" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626678641201" />
-    <state width="1478" height="289" key="GridCell.Tab.2.bottom" timestamp="1626676308848">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1478" height="289" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626676308848" />
-    <state width="1478" height="289" key="GridCell.Tab.2.center" timestamp="1626676308848">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1478" height="289" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626676308848" />
-    <state width="1478" height="289" key="GridCell.Tab.2.left" timestamp="1626676308848">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1478" height="289" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626676308848" />
-    <state width="1478" height="289" key="GridCell.Tab.2.right" timestamp="1626676308848">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1478" height="289" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626676308848" />
-    <state x="970" y="175" key="Maven.ArtifactSearchDialog" timestamp="1626666536246">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="970" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626666536246" />
-    <state x="661" y="230" key="RollbackChangesDialog" timestamp="1626665829888">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="661" y="230" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626665829888" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1620900665365">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1620900665365" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1626332964197">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626332964197" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1625132522065">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625132522065" />
-    <state x="447" y="145" width="671" height="534" key="find.popup" timestamp="1618653223312">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="447" y="145" width="671" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1618653223312" />
-    <state x="223" y="143" key="new project wizard" timestamp="1625473190598">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="223" y="143" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1625473190598" />
-    <state x="531" y="236" width="672" height="677" key="run.anything.popup" timestamp="1620893672441">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="531" y="236" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1620893672441" />
-    <state x="1018" y="183" width="840" height="856" key="search.everywhere.popup" timestamp="1626403756969">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1618542590322" />
-    <state x="1018" y="183" width="840" height="856" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1626403756969" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -641,7 +561,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/StreamApiTest.java</url>
-          <line>294</line>
+          <line>361</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -653,11 +573,6 @@
           <url>file://$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/ListDemo.java</url>
           <line>212</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/StreamTestDemo/src/main/java/com/zq/stream/StreamApiTest.java</url>
-          <line>163</line>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/cn/zq/cloudproviderpayment8001/rest/PaymentRest.java</url>

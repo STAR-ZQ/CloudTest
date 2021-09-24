@@ -7,12 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
-        <module name="StreamTestDemo" />
-        <module name="cloud-provider-payment8001" />
-        <module name="rabbitmq" />
         <module name="stream" />
+        <module name="cloud-provider-payment8001" />
         <module name="cloud-provider-rabbitmq" />
+        <module name="StreamTestDemo" />
+        <module name="demo" />
+        <module name="rabbitmq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

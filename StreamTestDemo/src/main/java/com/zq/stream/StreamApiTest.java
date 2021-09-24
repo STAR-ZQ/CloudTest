@@ -1,14 +1,13 @@
 package com.zq.stream;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.google.common.collect.Lists;
 import com.google.common.collect.MapDifference;
 import com.google.common.collect.Maps;
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import org.junit.Assert;
+import com.zq.stream.test.ProduceRealDTO;
+import com.zq.stream.test.RedisDto;
 import org.junit.Test;
 import org.springframework.util.CollectionUtils;
 
@@ -23,6 +22,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -143,6 +143,66 @@ public class StreamApiTest {
     }
 
     @Test
+    public void testTime1() throws ParseException {
+        SimpleDateFormat sft = new SimpleDateFormat("EEE MMM d HH:mm:ss 'CST' yyyy", Locale.ENGLISH);
+        Date parse = sft.parse("Wed Sep 01 06:40:24 CST 2021");
+        System.out.println(parse);
+        System.out.println(parse.getTime() / 1000L);
+
+        String dateString = "Wed Sep 01 06:40:24 CST 2021";
+        SimpleDateFormat sfEnd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sfStart = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", java.util.Locale.ENGLISH);
+        System.out.println(sfEnd.format(sfStart.parse(dateString)));
+    }
+
+    @Test
+    public void redisTest() {
+        RedisDto redisDto = new RedisDto();
+        redisDto.setOt(BigDecimal.ZERO);
+        redisDto.setEf(BigDecimal.ZERO);
+        redisDto.setAvgSpeed(BigDecimal.ZERO);
+        redisDto.setOffTime(Long.valueOf(1));
+        redisDto.setOnTime(Long.valueOf(1));
+        redisDto.setPulse(Long.valueOf(1));
+        redisDto.setSpeedSP("1");
+        redisDto.setStopNum(1);
+        redisDto.setStopTime(Long.valueOf(12));
+        redisDto.setTime(Long.valueOf(1));
+        redisDto.setUpTimeOt(BigDecimal.ZERO);
+        redisDto.setUpTimePulse(Long.valueOf("2"));
+        ProduceRealDTO produceRealDTO = new ProduceRealDTO();
+        produceRealDTO.setFabChgId("1430352358010216450");
+        produceRealDTO.setFabOt(BigDecimal.valueOf(9));
+        List<ProduceRealDTO> list = Lists.newArrayList();
+        list.add(produceRealDTO);
+        redisDto.setAllDTO(list);
+        System.out.println(JSON.toJSON(redisDto));
+    }
+
+    @Test
+    public void timeUnitTest() {
+        Integer time = 781293 * 1000;
+        long milliseconds = time.longValue();
+        long day = TimeUnit.MILLISECONDS.toDays(milliseconds);
+
+        long hours = TimeUnit.MILLISECONDS.toHours(milliseconds)
+                - TimeUnit.DAYS.toHours(TimeUnit.MILLISECONDS.toDays(milliseconds));
+
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(milliseconds)
+                - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milliseconds));
+
+        long seconds = TimeUnit.MILLISECONDS.toSeconds(milliseconds)
+                - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milliseconds));
+
+        long ms = TimeUnit.MILLISECONDS.toMillis(milliseconds)
+                - TimeUnit.SECONDS.toMillis(TimeUnit.MILLISECONDS.toSeconds(milliseconds));
+
+        System.out.println("milliseconds :-" + milliseconds);
+        System.out.println(String.format("%d 天 %d 时 %d 分 %d 秒 %d 毫秒", day, hours, minutes, seconds, ms));
+    }
+
+
+    @Test
     public void test888() {
         String testArray = "[\"94\",\"92\"]";
 //        JSONArray objects = JSON.parseArray(testArray);
@@ -199,6 +259,13 @@ public class StreamApiTest {
         if (!"3".equals(jsonObject.get("rebateType"))) {
             System.out.println(2);
         }
+    }
+
+    @Test
+    public void testTime123() {
+        Date date = new Date(1630976400);
+        long time = date.getTime() / 1000;
+        System.out.println(time);
     }
 
     @Test
