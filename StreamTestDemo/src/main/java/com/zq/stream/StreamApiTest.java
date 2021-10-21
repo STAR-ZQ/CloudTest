@@ -269,6 +269,18 @@ public class StreamApiTest {
     }
 
     @Test
+    public void token(){
+        long secont =60L * 60L * 24L * 30L * 1000L;
+        long times = 5l * 60l *1000l;
+        long millis = System.currentTimeMillis();
+        Date date = new Date(30000l);
+        Date s = new Date(1632727303902l+2592000000L);
+        System.out.println(millis);
+        System.out.println(date);
+        System.out.println(s);
+    }
+
+    @Test
     public void test222() {
         /**
          *  reduce ：规约操作

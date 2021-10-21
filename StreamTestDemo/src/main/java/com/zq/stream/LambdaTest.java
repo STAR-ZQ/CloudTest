@@ -32,6 +32,15 @@ public class LambdaTest {
     }
 
     @Test
+    public void test() {
+        Integer chica = 01;
+        for (int i = 0; i <= 5; i++) {
+            chica = chica + i;
+            System.out.println(chica);
+        }
+    }
+
+    @Test
     public void classTest() throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException, NoSuchFieldException {
         Class<?> aClass = Class.forName("com.zq.stream.ListDto");
         //反射无参

@@ -73,12 +73,12 @@ public class HSSFWorkbookTest {
         int sum = list.stream().mapToInt(Integer::intValue).sum();
         row1.createCell(11).setCellValue("合计：");
         row1.createCell(12).setCellValue("订单总额："+sum);
-        HSSFRow row2 = spreadsheet.createRow(list.size() + 2);
-//        XSSFCell cell2 =row2.createCell(12);
-        HSSFRow row3 = spreadsheet.createRow(list.size() + 3);
+//        HSSFRow row2 = spreadsheet.createRow(list.size() + 2);
+////        XSSFCell cell2 =row2.createCell(12);
+//        HSSFRow row3 = spreadsheet.createRow(list.size() + 3);
 //        XSSFCell cell3 =row3.createCell(13);
-        spreadsheet.addMergedRegion(new CellRangeAddress(list.size()+2, list.size()+2, 12, 14));
-        spreadsheet.addMergedRegion(new CellRangeAddress(list.size()+3, list.size()+3, 12, 14));
+//        spreadsheet.addMergedRegion(new CellRangeAddress(list.size()+2, list.size()+2, 12, 14));
+//        spreadsheet.addMergedRegion(new CellRangeAddress(list.size()+3, list.size()+3, 12, 14));
 
         FileOutputStream out = new FileOutputStream(new File("typesofcells.xlsx"));
         workbook.write(out);
