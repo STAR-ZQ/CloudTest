@@ -3,6 +3,7 @@ package com.zq.stream;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
+import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,6 +40,41 @@ public class ListDemo {
         } catch (ParseException e1) {
         }
         System.out.println(sdf.parse(sdf.format(new Date())).getTime());
+    }
+
+    @Test
+    public void chicaTest() {
+        for (int i = 0; i < 101; i++) {
+            System.out.println(String.format("%02d", i));
+        }
+    }
+
+    @Test
+    public void testCompareTo() {
+        List<ListDto> compareToList = Lists.newArrayList();
+        ListDto listDto = new ListDto();
+        listDto.setName("hzang");
+        ListDto listDto1 = new ListDto();
+        listDto1.setName("");
+        ListDto listDto2 = new ListDto();
+        listDto2.setName("hah");
+        compareToList.add(listDto);
+        compareToList.add(listDto1);
+        compareToList.add(listDto2);
+
+        for (ListDto s : compareToList) {
+            System.out.println(s.getName());
+        }
+        Collections.sort(compareToList, new Comparator<ListDto>() {
+            @Override
+            public int compare(ListDto o1, ListDto o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
+        System.out.println("==================================");
+        for (ListDto dto : compareToList) {
+            System.out.println(dto.getName());
+        }
     }
 
     @Test
@@ -175,7 +211,7 @@ public class ListDemo {
         list.add(demo3);
 
         Map<Long, List<ListDto>> listMap = list.stream().collect(Collectors.groupingBy(ListDto::getId));
-        for (int i = 0;i<list.size();i++) {
+        for (int i = 0; i < list.size(); i++) {
             if (listMap.get(list.get(i).getId()).size() != 2) {
                 list.remove(i);
                 i--;
@@ -185,34 +221,35 @@ public class ListDemo {
     }
 
     @Test
-    public void testkkklh(){
+    public void testkkklh() {
         String kk = "{\"memberId\":d34567890-3456789}";
         Object o = JSON.toJSON(kk);
         jkjk(o.toString());
         System.out.println(o);
     }
 
-    public void jkjk(String jj){
+    public void jkjk(String jj) {
         System.out.println(jj);
     }
 
 
     @Test
-    public void testTimess(){
+    public void testTimess() {
         System.out.println(Calendar.getInstance().getTimeInMillis());
         Date date = new Date();
 
         System.out.println(new SimpleDateFormat("yyyyMMddHHmmss").format(date));
     }
 
-@Test
-public  void testDate(){
-    //只能设置当前月的
-    Calendar aCalendar = Calendar.getInstance(Locale.CHINA);
-    //当前月份
-    Integer currentMonth = aCalendar.get(Calendar.MONTH) + 1;
-    System.out.println(currentMonth);
-}
+    @Test
+    public void testDate() {
+        //只能设置当前月的
+        Calendar aCalendar = Calendar.getInstance(Locale.CHINA);
+        //当前月份
+        Integer currentMonth = aCalendar.get(Calendar.MONTH) + 1;
+        System.out.println(currentMonth);
+    }
+
     @Test
     public void test999() {
         System.out.println(9 / 4 + 1);
@@ -220,7 +257,7 @@ public  void testDate(){
 
     @Test
     public void jjkjk() throws ParseException {
-       String date = "2021-04";
+        String date = "2021-04";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM");
         System.out.println(simpleDateFormat.format(simpleDateFormat.parse(date)));
     }
