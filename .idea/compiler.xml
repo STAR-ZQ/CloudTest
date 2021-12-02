@@ -7,12 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="StreamTestDemo" />
+        <module name="ZQ_TEST" />
         <module name="stream" />
-        <module name="demo" />
-        <module name="rabbitmq" />
         <module name="cloud-provider-payment8001" />
         <module name="cloud-provider-rabbitmq" />
+        <module name="StreamTestDemo" />
+        <module name="demo" />
+        <module name="rabbitmq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,11 +24,13 @@
       <module name="rabbitmq" target="1.8" />
       <module name="stream" target="1.8" />
       <module name="ZQ_SpringCloud" target="11" />
+      <module name="ZQ_TEST" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="StreamTestDemo" options="-parameters" />
+      <module name="ZQ_TEST" options="-parameters" />
       <module name="cloud-provider-payment8001" options="" />
       <module name="cloud-provider-rabbitmq" options="-parameters" />
       <module name="demo" options="-parameters" />

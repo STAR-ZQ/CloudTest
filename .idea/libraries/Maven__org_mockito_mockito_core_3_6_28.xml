@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.mockito:mockito-core:3.6.28">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../apk/apache-maven-3.8.1/Respository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28.jar!/" />
+      <root url="jar://E:/apache-maven-3.8.1/Repository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../apk/apache-maven-3.8.1/Respository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28-javadoc.jar!/" />
+      <root url="jar://E:/apache-maven-3.8.1/Repository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../apk/apache-maven-3.8.1/Respository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28-sources.jar!/" />
+      <root url="jar://E:/apache-maven-3.8.1/Repository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
